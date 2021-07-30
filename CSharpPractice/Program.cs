@@ -11,6 +11,8 @@ namespace CSharpPractice
             DisplayArray(array);
             Console.WriteLine("Sum of array is " + SumArray(array));
             Console.WriteLine("Product of the array is: " + ProductArray(array));
+            Console.WriteLine("Product of even numbers is "+ProductEvenArray(array));
+
                
         }
     }

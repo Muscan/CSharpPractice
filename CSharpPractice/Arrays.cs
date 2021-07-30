@@ -42,5 +42,19 @@ namespace CSharpPractice
 
             return product;
         }
+
+        //Product of the even numbers
+        public static int ProductEvenArray(int[] arr)
+        {
+            int productEven = 1;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    productEven *= arr[i];
+                }
+            }
+            return productEven;
+        }
     }
 }

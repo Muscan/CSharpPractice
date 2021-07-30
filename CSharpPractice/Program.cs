@@ -1,6 +1,8 @@
 ﻿using System;
 using static CSharpPractice.Arrays;
 using static CSharpPractice.Functions;
+using static CSharpPractice.ArraysUsefull;
+
 
 
 namespace CSharpPractice
@@ -49,6 +51,42 @@ namespace CSharpPractice
             Console.WriteLine("Odd digit from "+numberForFunctions+" is: "+OddDigit(numberForFunctions));
             Console.WriteLine("Smallest even from "+numberForFunctions+" is: "+SmallestEven(numberForFunctions));
             Console.WriteLine("Reversed number "+numberForShortDisplay+" is: "+ReversedNr(numberForShortDisplay));
+
+
+            // ArraysUSefull
+            int[] shortArray = new int[] {-1, 77, 2, 7 };
+            DirectSort(shortArray);
+            Console.Write("The sorted array using Direct Sort is: ");
+            DisplayArray(shortArray);
+            Console.WriteLine();
+
+            BubbleSort(shortArray);
+            Console.Write("The sorted array using Bubble Sort ");
+            DisplayArray(shortArray);
+            Console.WriteLine();
+
+
+            int positionInArray = 1;
+            Console.Write("The array after nr. at index " + positionInArray+ " was deleted is: ");
+            DisplayArray(DeleteAnElemFromAnArray(shortArray,positionInArray));
+
+            Console.WriteLine();
+            int nrToInsert = 423;
+            Console.Write("The new array after inserting at index  " + positionInArray +" the number "+ nrToInsert+ " is: ");
+            DisplayArray(InsertionFunction(shortArray, positionInArray, nrToInsert));
+            Console.WriteLine();
+
+
+
+            int nrToSearch = 321;
+            if(BinarySearch(shortArray,nrToSearch))
+                Console.WriteLine(" Number "+ nrToSearch +" found in array ");
+            else Console.Write("Number " + nrToSearch +" not found in ");
+            DisplayArray(shortArray);
+
+           
+
+
 
   
         }

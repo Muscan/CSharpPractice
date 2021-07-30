@@ -10,7 +10,7 @@ namespace CSharpPractice
         //Function which display an array
         public static void DisplayArray(int[] arr)
         {
-            Console.Write("  ");
+            Console.Write("");
             for (int i = 0; i < arr.Length; ++i)
             {
                 Console.Write((arr[i]) + " ");

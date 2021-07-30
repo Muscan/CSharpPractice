@@ -13,7 +13,7 @@ namespace CSharpPractice
             Console.Write("The array is: ");
             for (int i = 0; i < arr.Length; ++i)
             {
-                Console.Write((arr[i])+" ");
+                Console.Write((arr[i]) + " ");
             }
             Console.WriteLine();
         }
@@ -235,5 +235,106 @@ namespace CSharpPractice
             return "The minimum value from the array is " + var10000 + " , and the max value is " + MaxNrArray(arr);
         }
 
+        //Position of the first even element
+        public static int PositionFirstEvenElement(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        //Function which return the position of last even element
+        public static int PositionLastEvenElement(int[] arr)
+        {
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+        //Function for adding adding numbers between first and last even element
+        public static int SumForNrBetweenFirstLastPositionEvenElements(int[] arr)
+        {
+            int sum = 0;
+
+            for (int i = PositionFirstEvenElement(arr); i <= PositionLastEvenElement(arr); i++)
+            {
+                sum += arr[i];
+            }
+
+            return sum;
+        }
+
+        public static int AverageArray(int[] arr)
+        {
+            return SumArray(arr) / arr.Length;
+        }
+
+        //Function which returns the number of the elements which are greater than the Avg of arrray
+        public static int NrOfNumbersGreaterThanAvg(int[] arr)
+        {
+            int countElemente = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (AverageArray(arr) < arr[i])
+                {
+                    ++countElemente;
+                }
+            }
+
+            return countElemente;
+        }
+        //Function which checks if a number belongs to an interval(eg: 1,10, 3 -> 3 is between 1 and 10)
+        public static bool NumberInInterval(int firstNumber, int lastNumber, int controlNumber)
+        {
+            if (firstNumber < lastNumber)
+            {
+                if (controlNumber > firstNumber && controlNumber < lastNumber)
+                    return true;
+
+                else
+                    return false;
+
+            }
+            else
+            {
+                if (controlNumber < firstNumber && controlNumber > lastNumber)
+                    return true;
+                else
+                    return false;
+            }
+        }
+        //Function which returns the number of elements which are between first and last element
+        //based also on the function NumberInInterval
+        public static int NrOfNumbersBetweenFirstAndLastElem(int[] arr)
+        {
+            int countElements = 0;
+            int firstNumber = arr[0];
+            int lastNumber = arr[arr.Length - 1];
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (NumberInInterval(firstNumber, lastNumber, arr[i]))
+                {
+                    ++countElements;
+                }
+            }
+
+            return countElements;
+
+
+
+
+        }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using static CSharpPractice.Arrays;
+using static CSharpPractice.Functions;
+
 
 namespace CSharpPractice
 {
@@ -27,14 +29,28 @@ namespace CSharpPractice
             Console.WriteLine("Index of first even elem. is: "+PositionFirstEvenElement(array));
             Console.WriteLine("Index of last even elem. is: "+PositionLastEvenElement(array));
             Console.WriteLine("Sum of elements between first and last even number "+SumForNrBetweenFirstLastPositionEvenElements(array));
-            Console.WriteLine("Avg. of array is: "+AverageArray(array));
+            Console.Write("Avg. of array: ");
+            DisplayArray(array);
+            Console.WriteLine("is "+AverageArray(array));
             Console.WriteLine("Nr. of numbers greater than the avg of array are: "+NrOfNumbersGreaterThanAvg(array));
+
             if (NumberInInterval(10, 200, 200)) Console.WriteLine("Nr. in range ");
             else Console.WriteLine("Nr. not in range");
+
             Console.WriteLine("Total nr. of numbers which are in range is: " + NrOfNumbersBetweenFirstAndLastElem(array));
-            
 
+            // Functions
+            int numberForFunctions = 1098726345;
+            int numberForShortDisplay = 13278;
+            Console.WriteLine("The min. digit from "+numberForFunctions+" is: "+ MinNumber(numberForFunctions));
+            Console.WriteLine("Nr. of digits from "+numberForFunctions +" is: " + NumberOfDigits(numberForFunctions));
+            Console.WriteLine("Nr. of even digits from "+numberForFunctions+" is: " + EvenDigits(numberForFunctions));
+            Console.WriteLine("Max digit from "+numberForFunctions +" is: " + MaxDigit(numberForFunctions));
+            Console.WriteLine("Odd digit from "+numberForFunctions+" is: "+OddDigit(numberForFunctions));
+            Console.WriteLine("Smallest even from "+numberForFunctions+" is: "+SmallestEven(numberForFunctions));
+            Console.WriteLine("Reversed number "+numberForShortDisplay+" is: "+ReversedNr(numberForShortDisplay));
 
+  
         }
     }
 }

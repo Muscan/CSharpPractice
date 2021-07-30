@@ -10,12 +10,12 @@ namespace CSharpPractice
         //Function which display an array
         public static void DisplayArray(int[] arr)
         {
-            Console.Write("The array is: ");
+            Console.Write("  ");
             for (int i = 0; i < arr.Length; ++i)
             {
                 Console.Write((arr[i]) + " ");
             }
-            Console.WriteLine();
+            //Console.WriteLine();
         }
 
         //Function for sum of an array
@@ -314,6 +314,7 @@ namespace CSharpPractice
                     return false;
             }
         }
+
         //Function which returns the number of elements which are between first and last element
         //based also on the function NumberInInterval
         public static int NrOfNumbersBetweenFirstAndLastElem(int[] arr)
@@ -331,9 +332,6 @@ namespace CSharpPractice
             }
 
             return countElements;
-
-
-
 
         }
     }

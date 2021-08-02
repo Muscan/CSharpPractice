@@ -42,6 +42,19 @@ namespace CSharpPractice
 
             Console.WriteLine("Total nr. of numbers which are in range is: " + NrOfNumbersBetweenFirstAndLastElem(array));
 
+            ElementsRightToLeft(array);
+            Console.WriteLine();
+
+            
+            Console.WriteLine("Sum of even values from array is: " + SumEvenValues(array));
+            Console.WriteLine("Sum of values on the Even Index position is: " + SumValuesOnEvenIndexPosition(array));
+            Console.WriteLine("Sum of numbers which divide with 3, placed on Odd in the index is: " + NumbersDivideWith3OddIndexPosition(array));
+            Console.WriteLine("Position of the last element is: " + PositionLastElem(array));
+            Console.WriteLine("Position of the first element is: " + PositionFirstElem(array));
+            Console.WriteLine("Nr. of even pairs is: " + EvenPairs(array));
+
+
+
             // Functions
             int numberForFunctions = 1098726345;
             int numberForShortDisplay = 13278;
@@ -54,56 +67,56 @@ namespace CSharpPractice
             Console.WriteLine("Reversed number "+numberForShortDisplay+" is: "+ReversedNr(numberForShortDisplay));
 
 
-            // ArraysUSefull
-            int[] shortArray = new int[] {-1, 77, 2, 7 };
-            DirectSort(shortArray);
-            Console.Write("The sorted array using Direct Sort is: ");
-            DisplayArray(shortArray);
-            Console.WriteLine();
+    //        // ArraysUSefull
+    //        int[] shortArray = new int[] {-1, 77, 2, 7 };
+    //        DirectSort(shortArray);
+    //        Console.Write("The sorted array using Direct Sort is: ");
+    //        DisplayArray(shortArray);
+    //        Console.WriteLine();
 
-            BubbleSort(shortArray);
-            Console.Write("The sorted array using Bubble Sort ");
-            DisplayArray(shortArray);
-            Console.WriteLine();
-
-
-            int positionInArray = 1;
-            Console.Write("The array after nr. at index " + positionInArray+ " was deleted is: ");
-            DisplayArray(DeleteAnElemFromAnArray(shortArray,positionInArray));
-
-            Console.WriteLine();
-            int nrToInsert = 423;
-            Console.Write("The new array after inserting at index  " + positionInArray +" the number "+ nrToInsert+ " is: ");
-            DisplayArray(InsertionFunction(shortArray, positionInArray, nrToInsert));
-            Console.WriteLine();
+    //        BubbleSort(shortArray);
+    //        Console.Write("The sorted array using Bubble Sort ");
+    //        DisplayArray(shortArray);
+    //        Console.WriteLine();
 
 
+    //        int positionInArray = 1;
+    //        Console.Write("The array after nr. at index " + positionInArray+ " was deleted is: ");
+    //        DisplayArray(DeleteAnElemFromAnArray(shortArray,positionInArray));
 
-            int nrToSearch = 321;
-            if(BinarySearch(shortArray,nrToSearch))
-                Console.WriteLine(" Number "+ nrToSearch +" found in array ");
-            else Console.Write("Number " + nrToSearch +" not found in ");
-            DisplayArray(shortArray);
-
-
-            //Exercices PBInfo
-            int nrForIntExerices = 10;
-            //Pyramid351(nrForIntExerices);//Actual Parameter
-
-            
-            
-            //IsoscelTriangle(nrForIntExerices);
-            //PrintNumbers3231(nrForIntExerices);
-            //Display10Columns(nrForIntExerices);
-            ScaleNumbers1569(nrForIntExerices);
+    //        Console.WriteLine();
+    //        int nrToInsert = 423;
+    //        Console.Write("The new array after inserting at index  " + positionInArray +" the number "+ nrToInsert+ " is: ");
+    //        DisplayArray(InsertionFunction(shortArray, positionInArray, nrToInsert));
+    //        Console.WriteLine();
 
 
 
-           
+    //        int nrToSearch = 321;
+    //        if(BinarySearch(shortArray,nrToSearch))
+    //            Console.WriteLine(" Number "+ nrToSearch +" found in array ");
+    //        else Console.Write("Number " + nrToSearch +" not found in ");
+    //        DisplayArray(shortArray);
+    //        Console.WriteLine();
 
 
 
-  
+    //        //Exercices PBInfo
+    //        int nrForIntExerices = 1000;
+    //        Pyramid351(nrForIntExerices);//Actual Parameter
+
+
+
+    //        IsoscelTriangle(nrForIntExerices);
+    //        PrintNumbers3231(nrForIntExerices);
+    //        Display10Columns(nrForIntExerices);
+    //        ScaleNumbers1569(nrForIntExerices);
+    //        PrintOddNumbers3233(nrForIntExerices);
+    //        Print7AtEnd(nrForIntExerices);
+    //        PowerDisplay348(2, nrForIntExerices);
+    //        HowManyEven1261();
+
+
         }
     }
 }

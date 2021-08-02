@@ -334,5 +334,99 @@ namespace CSharpPractice
             return countElements;
 
         }
+
+        public static void ElementsRightToLeft(int[] arr)
+        {
+            Console.WriteLine("<-Right to left ");
+            for (int i = arr.Length - 1; i >= 0; --i)
+            {
+                Console.Write( arr[i] +" ");
+            }
+
+        }
+        public static int SumEvenValues(int[] arr)
+        {
+            int sumEvenValues = 0;
+
+            for (int i = 0; i < arr.Length; ++i)
+            {
+                if (arr[i] % 2 == 0)
+                {
+                    sumEvenValues += arr[i];
+                }
+            }
+
+            return sumEvenValues;
+        }
+
+        public static int SumValuesOnEvenIndexPosition(int[] arr)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < arr.Length; ++i)
+            {
+                if (i % 2 == 0)
+                {
+                    sum += arr[i];
+                }
+            }
+
+            return sum;
+        }
+
+
+        public static int NumbersDivideWith3OddIndexPosition(int[] arr)
+        {
+            int sum = 0;
+
+            for (int i = 0; i < arr.Length; ++i)
+            {
+                if (arr[i] % 3 == 0 && i % 2 == 1)
+                {
+                    sum += arr[i];
+                }
+            }
+
+            return sum;
+        }
+
+        public static int PositionLastElem(int[] arr)
+        {
+            int i = arr.Length - 1;
+            return i >= 0 ? i : 0;
+            /*if ( i >= 0)
+                return i;
+            else
+                return 0;
+            */
+        }
+
+        public static int PositionFirstElem(int[] arr)
+        {
+            int i = 0;
+            return i < arr.Length ? i : 0;
+        }
+
+        public static int EvenPairs(int[] arr)
+        {
+            int count = 0;
+            int i = 0;
+
+            for (int j = arr.Length - 1; i < j; --j)
+            {
+                if (arr[i] % 2 == 0 && arr[j] % 2 == 0)
+                    //It groups a number from the begining with a number from the end
+                    //when they are Even
+                {
+                    ++count;
+                }
+
+                ++i;
+            }
+
+            return count;
+        }
+
+
     }
 }

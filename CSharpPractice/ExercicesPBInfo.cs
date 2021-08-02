@@ -228,5 +228,169 @@ namespace CSharpPractice
 
         }
 
+        public static void PrintOddNumbers3233(int n)
+        {
+            /*
+            # 3233 DisplayImperatureNumbers1
+
+              Basic elements of language Repetitive structures Display OddNumbers1 
+
+            Tags: no tags
+
+                Statement
+                See solutions 16764
+
+            Requirement
+
+            Give a natural number n. Display in descending order the odd natural numbers less than or equal to n.
+            Input data
+
+            The program reads the number from the keyboard n.
+            Output data
+
+            The program displays on the screen in descending order the odd natural numbers less than or equal to n, separated by exactly one space.
+            Restrictions and clarifications
+
+                1 ≤ n ≤ 100
+
+
+            Example
+
+            Input data
+
+            10
+
+            Output data
+
+            9 7 5 3 1
+
+            */
+            if (n % 2 == 0)
+                n--;
+            for (int i = n; i >= 1; i -= 2)
+            {
+                Console.Write(i + " ");
+            }
+
+        }
+
+        public static void Print7AtEnd(int n)
+        {
+            //Function which prints the numbers with 7 at the end
+            for (int i = 7; i <= n; i += 10)
+            {
+                Console.Write(i + " ");
+            }
+        }
+
+        public static void PowerDisplay348(int pow, int number)
+        {
+        /*
+            # 348 Power Display
+
+              Basic elements of language Repetitive structures Power display 
+
+            Tags: Display values
+
+                Statement
+                See solutions 38837
+
+            Requirement
+
+            Give two nonzero natural numbers nand p. Display in ascending order its powers nless than or equal to p.
+            Input data
+
+            The program reads from the keyboard nand numbers p.
+            Output data
+
+            The program displays on the screen, in ascending order, its powers nless than or equal to p, separated by a space.
+            Restrictions and clarifications
+
+                2 ≤ n ≤ 10
+                1 ≤ p < 1.000.000.000
+
+
+            Example
+
+            Input data
+
+            3 100
+
+            Output data
+
+            1 3 9 27 81
+
+            */
+            for (int powerDisplay = 1; powerDisplay <= number; powerDisplay *= pow)
+            {
+                Console.Write(powerDisplay + " ");
+            }
+        }
+
+        public static void HowManyEven1261()
+
+        {
+       /*
+            # 1261 CatePare
+
+            Basic elements of language Repetitive structures CatePare 
+
+            Tags: Counting values
+
+                Statement
+                See solutions 121577
+
+            Requirement
+
+            Numbers are read from the keyboard until zero appears. Determine how many of them were even.
+            Input data
+
+            The program reads whole numbers from the keyboard. The reading ends when the value is entered 0, which will not be counted.
+            Output data
+
+            The program displays the number on the screen K, representing the number of even read numbers.
+            Restrictions and clarifications
+
+                the numbers read belong to the range (-1.000.000,1.000.000);
+                if no number is even the message will be displayed Does not exist.
+
+
+            Example
+
+            entry
+
+            1 2 3 4 5 6 0
+
+            Exit
+
+            3
+
+            */
+                        int k = 0;
+            int numberToRead;
+            Console.Write("Insert a number to check ");
+
+            numberToRead = int.Parse(Console.ReadLine());
+
+            while (numberToRead != 0)
+            {
+                if (numberToRead % 2 == 0)
+                    k++;
+                Console.Write("Insert the next number to check ");
+                numberToRead = int.Parse(Console.ReadLine());
+
+            }
+            if (k == 0)
+            {
+                Console.Write("Does not exists");
+            }
+            else//if (k!=0)
+            {
+                Console.Write("The total nr. of even numbers = " + k);
+            }
+
+
+        }
+
     }
 }

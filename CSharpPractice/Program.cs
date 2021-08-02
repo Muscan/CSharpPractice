@@ -2,6 +2,7 @@
 using static CSharpPractice.Arrays;
 using static CSharpPractice.Functions;
 using static CSharpPractice.ArraysUsefull;
+using static CSharpPractice.ExercicesPBInfo;
 
 
 
@@ -83,6 +84,20 @@ namespace CSharpPractice
                 Console.WriteLine(" Number "+ nrToSearch +" found in array ");
             else Console.Write("Number " + nrToSearch +" not found in ");
             DisplayArray(shortArray);
+
+
+            //Exercices PBInfo
+            int nrForIntExerices = 10;
+            //Pyramid351(nrForIntExerices);//Actual Parameter
+
+            
+            
+            //IsoscelTriangle(nrForIntExerices);
+            //PrintNumbers3231(nrForIntExerices);
+            //Display10Columns(nrForIntExerices);
+            ScaleNumbers1569(nrForIntExerices);
+
+
 
            
 

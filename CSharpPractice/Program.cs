@@ -128,17 +128,21 @@ namespace CSharpPractice
             */
 
             //--------------Strings--------------
-            string txt = "Random text appear";
+            string txt = "Randomizing text appear";
             //string name = "User developer";
             char c = 'z';
             string syllabe = "ar";
+            string word = "Rarom";
             var date = DateTime.Now;
+            int position = 1;
             //Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
             Console.WriteLine("Nr of appearance of the char '{0}' in text '{1}' is {2} times.", c, txt, NrCharTxt(txt,c));
             Console.WriteLine("Nr. of vowels in the text \"{0}\" is {1} times.", txt, CountVowelsTxt(txt));
             Console.WriteLine("Nr. of \"{0}\" in \"{1}\" is {2} times.", syllabe, txt, CountSyllabe(txt,syllabe));
             //With String Interpolation
             Console.WriteLine($"Nr of \"{syllabe}\" in \"{txt}\", is {CountSyllabe(txt,syllabe)} times");
+            Console.WriteLine($"New string after eliminating '{word[0]}' is \"{EraseFirstLetter(word)}\"");
+            Console.WriteLine($"Word after deleting char at position {position} is \"{ErasePos(word, position)}\"");
     
 
         }

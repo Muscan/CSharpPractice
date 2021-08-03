@@ -83,5 +83,35 @@ namespace CSharpPractice
 
             return count;
         }
+
+        public static string EraseFirstLetter(string word)
+        {
+                /*It is considered a word consisting of small and large letters of the English alphabet.
+             Create a program that allows you to delete all the occurrences of the first letter in that word.
+            Example: Pt.mamamie, it will be displayed aaie */
+
+           string newSavedWord = "";
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[0] != word[i]//if first letter != current letter(itterated letter)
+                             && word[0] - 32 != word[i]//If it`s capital letter it changes to lowercase -unicode 32
+                             && word[i] - 32 != word[0])
+                {
+                    newSavedWord += word[i];
+                }
+            }
+            return newSavedWord;
+        }
+
+        public static string ErasePos(string word, int poz)
+        {
+            //Deletes a char from a word
+            if (poz == 0)
+            {
+                return word.Substring(poz + 1);
+            }
+            return word.Substring(0, poz - 1) + word.Substring(poz + 1);
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using static CSharpPractice.Arrays;
 using static CSharpPractice.Functions;
 using static CSharpPractice.ArraysUsefull;
 using static CSharpPractice.ExercicesPBInfo;
+using static CSharpPractice.Strings;
 
 
 
@@ -12,6 +13,9 @@ namespace CSharpPractice
     {
         static void Main(string[] args)
         {
+            //--------------Arrays--------------
+            /*
+             
             int[] array = new int[] { 10, 20, -1, 330, 77, 12, 32, 56, 6, -1111, 66, 88, 99, 45, 24, 567, 999 };
             DisplayArray(array);
             Console.WriteLine("Sum of array is: " + SumArray(array));
@@ -52,10 +56,12 @@ namespace CSharpPractice
             Console.WriteLine("Position of the last element is: " + PositionLastElem(array));
             Console.WriteLine("Position of the first element is: " + PositionFirstElem(array));
             Console.WriteLine("Nr. of even pairs is: " + EvenPairs(array));
+            */
 
 
 
-            // Functions
+            // --------------Functions--------------
+            /*
             int numberForFunctions = 1098726345;
             int numberForShortDisplay = 13278;
             Console.WriteLine("The min. digit from "+numberForFunctions+" is: "+ MinNumber(numberForFunctions));
@@ -65,57 +71,75 @@ namespace CSharpPractice
             Console.WriteLine("Odd digit from "+numberForFunctions+" is: "+OddDigit(numberForFunctions));
             Console.WriteLine("Smallest even from "+numberForFunctions+" is: "+SmallestEven(numberForFunctions));
             Console.WriteLine("Reversed number "+numberForShortDisplay+" is: "+ReversedNr(numberForShortDisplay));
+            */
 
 
-    //        // ArraysUSefull
-    //        int[] shortArray = new int[] {-1, 77, 2, 7 };
-    //        DirectSort(shortArray);
-    //        Console.Write("The sorted array using Direct Sort is: ");
-    //        DisplayArray(shortArray);
-    //        Console.WriteLine();
+            // --------------ArraysUSefull--------------
+            /*
+            int[] shortArray = new int[] { -1, 77, 2, 7 };
+            DirectSort(shortArray);
+            Console.Write("The sorted array using Direct Sort is: ");
+            DisplayArray(shortArray);
+            Console.WriteLine();
 
-    //        BubbleSort(shortArray);
-    //        Console.Write("The sorted array using Bubble Sort ");
-    //        DisplayArray(shortArray);
-    //        Console.WriteLine();
-
-
-    //        int positionInArray = 1;
-    //        Console.Write("The array after nr. at index " + positionInArray+ " was deleted is: ");
-    //        DisplayArray(DeleteAnElemFromAnArray(shortArray,positionInArray));
-
-    //        Console.WriteLine();
-    //        int nrToInsert = 423;
-    //        Console.Write("The new array after inserting at index  " + positionInArray +" the number "+ nrToInsert+ " is: ");
-    //        DisplayArray(InsertionFunction(shortArray, positionInArray, nrToInsert));
-    //        Console.WriteLine();
+            BubbleSort(shortArray);
+            Console.Write("The sorted array using Bubble Sort ");
+            DisplayArray(shortArray);
+            Console.WriteLine();
 
 
+            int positionInArray = 1;
+            Console.Write("The array after nr. at index " + positionInArray + " was deleted is: ");
+            DisplayArray(DeleteAnElemFromAnArray(shortArray, positionInArray));
 
-    //        int nrToSearch = 321;
-    //        if(BinarySearch(shortArray,nrToSearch))
-    //            Console.WriteLine(" Number "+ nrToSearch +" found in array ");
-    //        else Console.Write("Number " + nrToSearch +" not found in ");
-    //        DisplayArray(shortArray);
-    //        Console.WriteLine();
+            Console.WriteLine();
+            int nrToInsert = 423;
+            Console.Write("The new array after inserting at index  " + positionInArray + " the number " + nrToInsert + " is: ");
+            DisplayArray(InsertionFunction(shortArray, positionInArray, nrToInsert));
+            Console.WriteLine();
 
 
 
-    //        //Exercices PBInfo
-    //        int nrForIntExerices = 1000;
-    //        Pyramid351(nrForIntExerices);//Actual Parameter
+            int nrToSearch = 321;
+            if (BinarySearch(shortArray, nrToSearch))
+                Console.WriteLine(" Number " + nrToSearch + " found in array ");
+            else Console.Write("Number " + nrToSearch + " not found in ");
+            DisplayArray(shortArray);
+            Console.WriteLine();
+            */
 
 
 
-    //        IsoscelTriangle(nrForIntExerices);
-    //        PrintNumbers3231(nrForIntExerices);
-    //        Display10Columns(nrForIntExerices);
-    //        ScaleNumbers1569(nrForIntExerices);
-    //        PrintOddNumbers3233(nrForIntExerices);
-    //        Print7AtEnd(nrForIntExerices);
-    //        PowerDisplay348(2, nrForIntExerices);
-    //        HowManyEven1261();
+            //--------------Exercices PBInfo--------------
+            /*
+            int nrForIntExerices = 1000;
+            Pyramid351(nrForIntExerices);//Actual Parameter
 
+
+
+            IsoscelTriangle(nrForIntExerices);
+            PrintNumbers3231(nrForIntExerices);
+            Display10Columns(nrForIntExerices);
+            ScaleNumbers1569(nrForIntExerices);
+            PrintOddNumbers3233(nrForIntExerices);
+            Print7AtEnd(nrForIntExerices);
+            PowerDisplay348(2, nrForIntExerices);
+            HowManyEven1261();
+            */
+
+            //--------------Strings--------------
+            string txt = "Random text appear";
+            //string name = "User developer";
+            char c = 'z';
+            string syllabe = "ar";
+            var date = DateTime.Now;
+            //Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
+            Console.WriteLine("Nr of appearance of the char '{0}' in text '{1}' is {2} times.", c, txt, NrCharTxt(txt,c));
+            Console.WriteLine("Nr. of vowels in the text \"{0}\" is {1} times.", txt, CountVowelsTxt(txt));
+            Console.WriteLine("Nr. of \"{0}\" in \"{1}\" is {2} times.", syllabe, txt, CountSyllabe(txt,syllabe));
+            //With String Interpolation
+            Console.WriteLine($"Nr of \"{syllabe}\" in \"{txt}\", is {CountSyllabe(txt,syllabe)} times");
+    
 
         }
     }

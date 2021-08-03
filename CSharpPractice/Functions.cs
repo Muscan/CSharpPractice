@@ -108,7 +108,7 @@ namespace CSharpPractice
         {
             int reversedNumber = 0;
 
-            for (bool var3 = false; number != 0; number /= 10)
+            for (; number != 0; number /= 10)//;for works like a while
             {
                 int digit = number % 10;
                 reversedNumber = reversedNumber * 10 + digit;

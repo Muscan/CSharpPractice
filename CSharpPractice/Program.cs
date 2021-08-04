@@ -1,15 +1,18 @@
 ﻿using System;
 using static CSharpPractice.Arrays;
-using static CSharpPractice.Functions;
 using static CSharpPractice.ArraysUsefull;
+using static CSharpPractice.ExercicesMid;
 using static CSharpPractice.ExercicesPBInfo;
+using static CSharpPractice.Functions;
 using static CSharpPractice.Strings;
+
+
 
 
 
 namespace CSharpPractice
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
@@ -136,15 +139,18 @@ namespace CSharpPractice
             var date = DateTime.Now;
             int position = 1;
             //Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
-            Console.WriteLine("Nr of appearance of the char '{0}' in text '{1}' is {2} times.", c, txt, NrCharTxt(txt,c));
+            Console.WriteLine("Nr of appearance of the char '{0}' in text '{1}' is {2} times.", c, txt, NrCharTxt(txt, c));
             Console.WriteLine("Nr. of vowels in the text \"{0}\" is {1} times.", txt, CountVowelsTxt(txt));
-            Console.WriteLine("Nr. of \"{0}\" in \"{1}\" is {2} times.", syllabe, txt, CountSyllabe(txt,syllabe));
+            Console.WriteLine("Nr. of \"{0}\" in \"{1}\" is {2} times.", syllabe, txt, CountSyllabe(txt, syllabe));
             //With String Interpolation
-            Console.WriteLine($"Nr of \"{syllabe}\" in \"{txt}\", is {CountSyllabe(txt,syllabe)} times");
+            Console.WriteLine($"Nr of \"{syllabe}\" in \"{txt}\", is {CountSyllabe(txt, syllabe)} times");
             Console.WriteLine($"New string after eliminating '{word[0]}' is \"{EraseFirstLetter(word)}\"");
             Console.WriteLine($"Word after deleting char at position {position} is \"{ErasePos(word, position)}\"");
-    
+            Console.WriteLine();
 
+            //--------------Exercices Mid--------------
+            string encoded = "1G11o2L";
+            Console.WriteLine($"Decoded text from {encoded} is {EncodedText(encoded)}");
         }
     }
 }

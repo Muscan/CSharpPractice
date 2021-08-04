@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CSharpPractice
 {
-    class Strings
+    partial class Strings
     {
         public static int NrCharTxt(String text, char characterWeAreSearchingFor)
         {
@@ -62,7 +60,7 @@ namespace CSharpPractice
         The syllable will be the keyboard reading.
         Example: for the letter 'a', the syllable "re" with the text: "Ina has many apples"
             will be displayed: 2*/
-        
+
         public static int CountSyllabe(string text, string syllabe)
         {
 
@@ -86,11 +84,11 @@ namespace CSharpPractice
 
         public static string EraseFirstLetter(string word)
         {
-                /*It is considered a word consisting of small and large letters of the English alphabet.
-             Create a program that allows you to delete all the occurrences of the first letter in that word.
-            Example: Pt.mamamie, it will be displayed aaie */
+            /*It is considered a word consisting of small and large letters of the English alphabet.
+         Create a program that allows you to delete all the occurrences of the first letter in that word.
+        Example: Pt.mamamie, it will be displayed aaie */
 
-           string newSavedWord = "";
+            string newSavedWord = "";
             for (int i = 0; i < word.Length; i++)
             {
                 if (word[0] != word[i]//if first letter != current letter(itterated letter)
@@ -110,8 +108,10 @@ namespace CSharpPractice
             {
                 return word.Substring(poz + 1);
             }
-            return word.Substring(0, poz - 1) + word.Substring(poz + 1);
+            return word.Substring(0, poz) + word.Substring(poz + 1);
 
         }
+
+
     }
 }

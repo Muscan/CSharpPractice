@@ -13,7 +13,6 @@ namespace CSharpPractice
             Console.Write($" {array[i]} ");
         }
 
-
         public static void AddTwoNumbers(int number1, int number2)
         {
 
@@ -65,7 +64,6 @@ namespace CSharpPractice
 
         }
 
-
         public static void SwitchSign(int n1, int n2, char s)
         {
             int result;
@@ -89,5 +87,49 @@ namespace CSharpPractice
             }
             Console.WriteLine($"Result is:{result}");
         }
+
+        public static int CountVowels1(string word)
+        {
+            int numberOfVowels = 0;
+            for(int i = 0; i < word.Length; i++)
+            {
+                if (IsVowel(word[i]))
+                {
+                    numberOfVowels++;
+                }
+            }
+
+            return numberOfVowels;
+
+        }
+        
+        public static bool IsVowel(char c)
+        {
+            string vowels = "AEIOUaeiou";
+
+            for(int i = 0; i<vowels.Length; i++)
+
+            if(vowels[i] == c)
+            {
+                return true;
+            }
+            return false;
+        }
+        
+        public static void EraseSpecificPosition(string text, int position)
+        {
+            //Ana are multe mere.
+
+            if (position >= 0 && position <= text.Length)
+            {
+                string newText = "";
+                newText = text.Substring(0, position) + text.Substring(position + 1);
+                Console.WriteLine($"New text is: {newText}");
+            }else
+            {
+                Console.WriteLine("Position out of range");
+            }
+        }
+
     }
 }

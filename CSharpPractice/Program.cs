@@ -19,13 +19,19 @@ namespace CSharpPractice
 
 
         {   //--------------Exercices Basic--------------
-
-            //AddTwoNumbers(10, 15);
+            /*
+            AddTwoNumbers(10, 15);
             int[] array = { 2, 20, 100 };
             AddNNumbers(array);
-            //SignChar(10, 5, '-');
-            //SwitchSign(20, 2, '*');
+            SignChar(10, 5, '-');
+            SwitchSign(20, 2, '*');
+            */
 
+            //--------------Exercices Basic/Strings--------------
+
+            //string wordForVowels = "Module is optimized and the debugger option 'Just My Code' is enabled.";
+            //Console.WriteLine($"Nr. of vowels for text\" {wordForVowels}\" is: {CountVowels1(wordForVowels)}");
+            EraseSpecificPosition("ABC", 7);
 
             //--------------Exercices Mid--------------
             /*string encoded = "1G11o2L";

@@ -31,7 +31,7 @@ namespace CSharpPractice
 
             //string wordForVowels = "Module is optimized and the debugger option 'Just My Code' is enabled.";
             //Console.WriteLine($"Nr. of vowels for text\" {wordForVowels}\" is: {CountVowels1(wordForVowels)}");
-            EraseSpecificPosition("ABC", 7);
+            //EraseSpecificPosition("ABC", 7);
 
             //--------------Exercices Mid--------------
             /*string encoded = "1G11o2L";
@@ -172,8 +172,12 @@ namespace CSharpPractice
             Console.WriteLine($"New string after eliminating '{word[0]}' is \"{EraseFirstLetter(word)}\"");
             Console.WriteLine($"Word after deleting char at position {position} is \"{ErasePos(word, position)}\"");
             Console.WriteLine();
+
+            Console.WriteLine(StickedVowels("Caaree"));
+            Console.WriteLine(SumAsciiUpperConsonant("AcTZ"));
+            Console.WriteLine(DeleteWordsWithVowelsAtTheBeginAndEnd("Oceane ioe jeep"));
+            Console.WriteLine(TransformNameIntoInitials("Kün Van Berlin"));
             */
-           
 
         }
     }

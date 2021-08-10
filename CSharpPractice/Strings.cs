@@ -26,9 +26,9 @@ namespace CSharpPractice
             return countNrOfAppearanceInText;
         }
 
-        //Nr. of vowels
+        
         public static bool IsVowel(char x)
-        {
+        {   //Nr. of vowels
 
             string vowels = "AEIOUaeiou";
 
@@ -111,7 +111,125 @@ namespace CSharpPractice
             return word.Substring(0, poz) + word.Substring(poz + 1);
 
         }
+      
+        public static int StickedVowels(string text)
+        {
+            /* a.How many groups next to the same small vowel has the string read from the keyboard?
+              Ex : Andreea started working with Boolean numbers.
+               Displaying: 2(because we have "ee" and "oo") */
+            int count = 0;
+            string pairVowels = "";
+            for (int i = 0; i < text.Length - 1; i++)
+            {
+                if (IsVowelLowerCase(text[i])
+                    && text[i] == text[i + 1])
+                {
+                    pairVowels += text[i] + "" + text[i + 1];
+                    //"" it converts to string. 
+                    // Otherwise it will display the ascii decimal result
+                    count++;
+                }
+            }
+            return count;
+        }
 
+        public static bool IsVowelLowerCase(char c)
+        {
+            string vowels = "aeiou";
+            for (int i = 0; i < vowels.Length; i++)
+            {
+                if (vowels[i] == c)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
+
+        public static int SumAsciiUpperConsonant(string text)
+        {       /*b. What is the sum of all the ASCII codes 
+                 * of the large consonants in the string?*/
+
+            int sum = 0;
+            string ascii = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (IsUpperConsonant(text[i]) == true)
+                {
+                    sum += text[i];
+
+                }
+            }
+            return sum;
+
+        }
+
+        public static bool IsVowelUpperCase(char c)
+        {
+            string upperVowels = "AEIOU";
+            for (int i = 0; i < upperVowels.Length; i++)
+            {
+                if (upperVowels[i] == c)
+                {
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
+
+        public static bool IsUpperConsonant(char c)
+        {
+
+            return Char.IsUpper(c) && IsVowelUpperCase(c) == false;
+        }
+
+
+
+
+        public static string DeleteWordsWithVowelsAtTheBeginAndEnd(string text)
+        {
+            /*c. Delete all words that start and end with a vowel.
+             * If it does not exist, a corresponding message will be marked.*/
+            string[] word = text.Split(" ");
+            string newWordWithoutVowels = "";
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (FirstLastIsVowel(word[i]) == false)
+                {
+                    newWordWithoutVowels += word[i];
+                }
+            }
+            return newWordWithoutVowels;
+        }
+
+        public static bool FirstLastIsVowel(string text)
+        {
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (IsVowel(text[0]) && IsVowel(text[text.Length - 1]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Transform James Field into J.F.
+        public static string TransformNameIntoInitials(string names)
+        {
+            string newName = "";
+            string[] oneByOneName = names.Split(" ");
+            for (int i = 0; i < oneByOneName.Length; i++)
+            {
+                newName += oneByOneName[i][0] +""+'.';
+            }
+            return newName;
+
+        }
 
     }
 }

@@ -5,6 +5,7 @@ using static CSharpPractice.ExercicesMid;
 using static CSharpPractice.ExercicesPBInfo;
 using static CSharpPractice.Functions;
 using static CSharpPractice.Strings;
+using static CSharpPractice.ExercicesBasic;
 
 
 
@@ -15,7 +16,24 @@ namespace CSharpPractice
     partial class Program
     {
         static void Main(string[] args)
-        {
+
+
+        {   //--------------Exercices Basic--------------
+
+            //AddTwoNumbers(10, 15);
+            int[] array = { 2, 20, 100 };
+            AddNNumbers(array);
+            //SignChar(10, 5, '-');
+            //SwitchSign(20, 2, '*');
+
+
+            //--------------Exercices Mid--------------
+            /*string encoded = "1G11o2L";
+            Console.WriteLine($"Decoded text from {encoded} is {EncodedText(encoded)}");*/
+
+
+
+
             //--------------Arrays--------------
             /*
              
@@ -131,6 +149,7 @@ namespace CSharpPractice
             */
 
             //--------------Strings--------------
+            /*
             string txt = "Randomizing text appear";
             //string name = "User developer";
             char c = 'z';
@@ -147,10 +166,9 @@ namespace CSharpPractice
             Console.WriteLine($"New string after eliminating '{word[0]}' is \"{EraseFirstLetter(word)}\"");
             Console.WriteLine($"Word after deleting char at position {position} is \"{ErasePos(word, position)}\"");
             Console.WriteLine();
+            */
+           
 
-            //--------------Exercices Mid--------------
-            string encoded = "1G11o2L";
-            Console.WriteLine($"Decoded text from {encoded} is {EncodedText(encoded)}");
         }
     }
 }

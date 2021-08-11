@@ -56,14 +56,12 @@ namespace CSharpPractice
             return count;
         }
 
-        /*c.The number of occurrences of a syllable in the text.
-        The syllable will be the keyboard reading.
-        Example: for the letter 'a', the syllable "re" with the text: "Ina has many apples"
-            will be displayed: 2*/
-
         public static int CountSyllabe(string text, string syllabe)
         {
-
+            /*c.The number of occurrences of a syllable in the text.
+       The syllable will be the keyboard reading.
+       Example: for the letter 'a', the syllable "re" with the text: "Ina has many apples"
+           will be displayed: 2*/
             int count = 0;
 
             int position = text.IndexOf(syllabe);
@@ -146,14 +144,11 @@ namespace CSharpPractice
             return false;
         }
 
-
-
         public static int SumAsciiUpperConsonant(string text)
         {       /*b. What is the sum of all the ASCII codes 
                  * of the large consonants in the string?*/
 
             int sum = 0;
-            string ascii = "";
             for (int i = 0; i < text.Length; i++)
             {
                 if (IsUpperConsonant(text[i]) == true)
@@ -180,15 +175,11 @@ namespace CSharpPractice
 
         }
 
-
         public static bool IsUpperConsonant(char c)
         {
 
             return Char.IsUpper(c) && IsVowelUpperCase(c) == false;
         }
-
-
-
 
         public static string DeleteWordsWithVowelsAtTheBeginAndEnd(string text)
         {
@@ -217,10 +208,10 @@ namespace CSharpPractice
             }
             return false;
         }
-
-        //Transform James Field into J.F.
+  
         public static string TransformNameIntoInitials(string names)
         {
+            //Transform James Field into first initial J.F.
             string newName = "";
             string[] oneByOneName = names.Split(" ");
             for (int i = 0; i < oneByOneName.Length; i++)
@@ -228,7 +219,47 @@ namespace CSharpPractice
                 newName += oneByOneName[i][0] +""+'.';
             }
             return newName;
+        }
+    
+        public static void ExtractNumbers(string text)
+        {
+            /* It is considered a text in which the space is the only separator.
+         Create a program that displays the numbers that appear in the text, separated by a space.
+        Ex: Pt. "Ana has 7 eras and 233 pears will be displayed 7 223" */
 
+            string newWordWithNumbers = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (Char.IsDigit(text[i]) == true)
+                    //If the first char is a number
+                {
+                    newWordWithNumbers += text[i];
+                }
+                if (text[i] == ' ')
+                {
+                    newWordWithNumbers += " ";
+                }
+            }
+            Console.WriteLine($"Numbers are {newWordWithNumbers}");
+        }
+        
+        public static void ReplacePartsOfAString(string text, string s1, string s2)
+
+        {
+            /* The Find Replace operation is intended to be executed on text that contains more than 255 characters.
+         This operation consists in replacing all occurrences of a substring s1 with another substring s2.
+         Create a program that simulates this operation.S1 and s2 strings do not necessarily have the same length.
+        For. 'are mere and pere' s1 = re and s2 = rare is displayed: arare merare and perare */
+            //IndeOf returns the position on which the s1 in the text is. 
+
+            int position;
+            position = text.IndexOf(s1);
+            while(position >= 0)
+            {
+                text = text.Substring(0, position) + s2 + text.Substring(position + s1.Length);
+                position = text.IndexOf(s1,position+s2.Length);
+            }
+            Console.WriteLine(text);
         }
 
     }

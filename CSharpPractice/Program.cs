@@ -114,6 +114,10 @@ namespace CSharpPractice
             DisplayArray(shortArray);
             Console.WriteLine();
 
+            BubbleSort2(shortArray);
+            Console.Write("The sorted array using Bubble Sort2 is: ");
+            DisplayArray(shortArray);
+            Console.WriteLine();
 
             int positionInArray = 1;
             Console.Write("The array after nr. at index " + positionInArray + " was deleted is: ");
@@ -177,8 +181,10 @@ namespace CSharpPractice
             Console.WriteLine(SumAsciiUpperConsonant("AcTZ"));
             Console.WriteLine(DeleteWordsWithVowelsAtTheBeginAndEnd("Oceane ioe jeep"));
             Console.WriteLine(TransformNameIntoInitials("Kün Van Berlin"));
+            ExtractNumbers("Text 123 or1st");
+            ReplacePartsOfAString("Jimmy are mere si pere", "re", "rare");
             */
-
+   
         }
     }
 }

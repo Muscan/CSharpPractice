@@ -48,10 +48,33 @@ namespace CSharpPractice
 
         }
 
-        //Function which deletes an elemen. from a specified position
-        //Eg. arr{3,5,2}, position=1 => {3,2}
+        public static void BubbleSort2(int[] array)
+        {
+            //using a flag to compare the elements and check if they need to be changed
+            //When no neighbor needs to be changes, flag remains 1
+            //The array is sortes
+            int flag;//1 if not sorted, 0 if sorted. 
+            do
+            {
+                flag = 1;//suppose in the beggining that it is sorted
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    //check if the current elem is > than the next to the right
+                    if (array[i] > array[i + 1])
+                    {         
+                        int temporary = array[i];
+                        array[i] = array[i + 1];
+                        array[i + 1] = temporary;
+                        flag = 0;
+                    }
+                }
+            } while (flag == 0);
+        }
+        
         public static int[] DeleteAnElemFromAnArray(int[] array, int position)
         {
+            //Function which deletes an elemen. from a specified position
+            //Eg. arr{3,5,2}, position=1 => {3,2}
             for (int i = position; i < array.Length - 1; i++)
             {
                 array[i] = array[i + 1];

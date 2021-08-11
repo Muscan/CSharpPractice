@@ -72,19 +72,19 @@ namespace CSharpPractice
 
             return numberOfEven;
         }
+
         //Max nr from an array
         public static int MaxNrArray(int[] arr)
         {
-            int max = 0;
+            int max = arr[0];
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 1; i < arr.Length; i++)
             {
                 if (arr[i] > max)
                 {
                     max = arr[i];
                 }
             }
-
             return max;
         }
 
@@ -103,6 +103,7 @@ namespace CSharpPractice
 
             return evenMax;
         }
+
         //Sum of negative numbers
         public static int SumNegative(int[] arr)
         {
@@ -146,6 +147,7 @@ namespace CSharpPractice
 
             return prime;
         }
+
         //Nr. of odd nambers
         public static int NrValOdd(int[] arr)
         {
@@ -161,6 +163,7 @@ namespace CSharpPractice
 
             return countOdd;
         }
+
         //Absolute value from Even-Odd numbers
         //Abs is the non-negative value of x without regard to its sign
         public static int AbsValue(int[] arr)

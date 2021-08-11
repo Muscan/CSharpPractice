@@ -184,7 +184,7 @@ namespace CSharpPractice
             ExtractNumbers("Text 123 or1st");
             ReplacePartsOfAString("Jimmy are mere si pere", "re", "rare");
             */
-   
+           
         }
     }
 }

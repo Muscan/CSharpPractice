@@ -25,8 +25,7 @@ namespace CSharpPractice
             }
             return countNrOfAppearanceInText;
         }
-
-        
+  
         public static bool IsVowel(char x)
         {   //Nr. of vowels
 
@@ -105,6 +104,10 @@ namespace CSharpPractice
             if (poz == 0)
             {
                 return word.Substring(poz + 1);
+            }
+            if (poz >= word.Length)
+            {
+                return word;
             }
             return word.Substring(0, poz) + word.Substring(poz + 1);
 
@@ -225,7 +228,7 @@ namespace CSharpPractice
         {
             /* It is considered a text in which the space is the only separator.
          Create a program that displays the numbers that appear in the text, separated by a space.
-        Ex: Pt. "Ana has 7 eras and 233 pears will be displayed 7 223" */
+        Ex: Pt. "John has 2 cars and 233 meter walked today, will be displayed 7 223" */
 
             string newWordWithNumbers = "";
             for (int i = 0; i < text.Length; i++)
@@ -252,15 +255,22 @@ namespace CSharpPractice
         For. 'are mere and pere' s1 = re and s2 = rare is displayed: arare merare and perare */
             //IndeOf returns the position on which the s1 in the text is. 
 
+            //IndeOf returns the position on which the s1 in the text is or -1 if s1 is not found in text. 
+
             int position;
             position = text.IndexOf(s1);
-            while(position >= 0)
+            while (position >= 0)
             {
                 text = text.Substring(0, position) + s2 + text.Substring(position + s1.Length);
-                position = text.IndexOf(s1,position+s2.Length);
+                //concatenation of the subtring that starts at index 0 and has 'position' characters(the subtring before position)
+                //with the string s2 and the substring that starts after position + the length of s1.
+                //ex:after the first iteration text will be: arare mere si pere
+                position = text.IndexOf(s1, position + s2.Length);//looks for the next appearance of the string s1 in text
+
+
             }
             Console.WriteLine(text);
         }
-
+        
     }
 }

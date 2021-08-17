@@ -116,7 +116,7 @@ namespace CSharpPractice
         public static int StickedVowels(string text)
         {
             /* a.How many groups next to the same small vowel has the string read from the keyboard?
-              Ex : Andreea started working with Boolean numbers.
+              Ex : Andreea started working with Booleean numbers.
                Displaying: 2(because we have "ee" and "oo") */
             int count = 0;
             string pairVowels = "";

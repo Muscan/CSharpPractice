@@ -52,7 +52,7 @@ namespace CSharpPractice
         {
             //using a flag to compare the elements and check if they need to be changed
             //When no neighbor needs to be changes, flag remains 1
-            //The array is sortes
+            //The array is sorted
             int flag;//1 if not sorted, 0 if sorted. 
             do
             {

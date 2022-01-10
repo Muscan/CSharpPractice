@@ -23,8 +23,7 @@ namespace CSharpPractice
 
         public static int NumberOfDigits(int number)
         {
-            bool digitNumber = false;
-
+         
             int count;
             for (count = 0; number != 0; number /= 10)
             {

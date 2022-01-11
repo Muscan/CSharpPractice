@@ -6,6 +6,7 @@ namespace CSharpPractice
 {
     class ExercicesBasic
     {
+
         public static void PrintArray(int[] array)
         {
            
@@ -16,7 +17,7 @@ namespace CSharpPractice
         public static void AddTwoNumbers(int number1, int number2)
         {
 
-            int result = 0;
+             int result;
              result = number1 + number2; 
 
             Console.WriteLine(result);

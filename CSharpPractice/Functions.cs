@@ -99,7 +99,6 @@ namespace CSharpPractice
                     smallestDigit = digit;
                 }
             }
-
             return smallestDigit;
         }
 
@@ -112,12 +111,7 @@ namespace CSharpPractice
                 int digit = number % 10;
                 reversedNumber = reversedNumber * 10 + digit;
             }
-
             return reversedNumber;
         }
-
-    
-
-      
     }
 }
